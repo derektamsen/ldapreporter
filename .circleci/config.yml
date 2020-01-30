@@ -8,9 +8,7 @@ jobs:
     steps:
       - checkout
 
-      - run: make test
-
-      - run: make build
+      - run: make
 
 workflows:
   version: 2
