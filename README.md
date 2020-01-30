@@ -7,11 +7,11 @@ members. The data is exported as json.
 
 ```shell
 {
-  foo: [
+  group1: [
     user1,
     user2,
   ],
-  bar: [
+  group2: [
     user1,
     user3,
   ]
