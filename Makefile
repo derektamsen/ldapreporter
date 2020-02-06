@@ -2,7 +2,7 @@
 GOCMD=go
 GOBUILD=$(GOCMD) build
 GOCLEAN=$(GOCMD) clean
-GOVET=$(CMD) vet
+GOVET=$(GOCMD) vet
 GOTEST=$(GOCMD) test -race
 GOGET=$(GOCMD) get
 GORUN=$(GOCMD) run
