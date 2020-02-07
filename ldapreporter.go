@@ -45,21 +45,26 @@ type client interface {
 
 type config struct {
 	server   string // ldap server and port to connect
-	binduser user   // user to bind with
+	bindUser string // user to bind with
+	bindPass string // password to bind with
+	isTLS    bool   // true if this will be a TLS session
 }
 
-type user struct {
-	user, password string // username and password
+type group struct {
+	name    string
+	members []user
 }
 
-// new creates a new ldap connection and returns a session object
-func new(c *config) (*ldap.Conn, error) {
+type user string
+
+// session creates a new ldap connection and returns a session object
+func session(c *config) (*ldap.Conn, error) {
 	conn, err := ldap.DialURL(c.server)
 	if err != nil {
 		return nil, err
 	}
 
-	err = conn.Bind(c.binduser.user, c.binduser.password)
+	err = conn.Bind(c.bindUser, c.bindPass)
 	if err != nil {
 		return nil, err
 	}
@@ -69,16 +74,8 @@ func new(c *config) (*ldap.Conn, error) {
 
 // search ldap for an object and return it
 // user needs to handle defer to close session
-func get(c client) (*ldap.SearchResult, error) {
-	request := ldap.NewSearchRequest(
-		"dc=planetexpress,dc=com",
-		ldap.ScopeWholeSubtree, ldap.NeverDerefAliases, 0, 0, false,
-		fmt.Sprintf("(&(objectclass=Group))"),
-		[]string{"cn", "member"},
-		nil,
-	)
-
-	results, err := c.Search(request)
+func get(c client, s *ldap.SearchRequest) (*ldap.SearchResult, error) {
+	results, err := c.Search(s)
 	if err != nil {
 		return results, err
 	}
@@ -87,17 +84,14 @@ func get(c client) (*ldap.SearchResult, error) {
 }
 
 func main() {
-	user := user{
-		user:     "cn=admin,dc=planetexpress,dc=com",
-		password: "GoodNewsEveryone",
-	}
 	config := &config{
 		server:   "ldap://localhost:8389",
-		binduser: user,
+		bindUser: "cn=admin,dc=planetexpress,dc=com",
+		bindPass: "GoodNewsEveryone",
 	}
 
 	// create a new ldap session
-	session, err := new(config)
+	session, err := session(config)
 	if err != nil {
 		log.Error(err)
 	}
@@ -106,7 +100,15 @@ func main() {
 	log.Info(session)
 
 	// search ldap
-	results, err := get(session)
+	search := ldap.NewSearchRequest(
+		"dc=planetexpress,dc=com",
+		ldap.ScopeWholeSubtree, ldap.NeverDerefAliases, 0, 0, false,
+		fmt.Sprintf("(&(objectclass=Group))"),
+		[]string{"cn", "member"},
+		nil,
+	)
+
+	results, err := get(session, search)
 	if err != nil {
 		log.Error(err)
 	}
