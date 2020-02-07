@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"reflect"
 	"testing"
 
 	"github.com/go-ldap/ldap/v3"
@@ -15,6 +16,27 @@ type mockClient struct {
 }
 
 var mockErr error = errors.New("Did Everything Just Taste Purple For A Second?")
+
+var mockUser ldap.AttributeTypeAndValue = ldap.AttributeTypeAndValue{
+	Type:  "cn",
+	Value: "Hubert J. Farnsworth",
+}
+
+var mockUserName string = mockUser.Value
+
+var strMockUser string = fmt.Sprintf("%s=%s", mockUser.Type, mockUser.Value)
+
+var mockGroupOneMember ldap.Entry = ldap.Entry{
+	DN: "cn=admin,dc=planetexpress,dc=com",
+	Attributes: []*ldap.EntryAttribute{
+		{
+			Name:   "member",
+			Values: []string{strMockUser},
+		},
+	},
+}
+
+var mockGroupName string = mockGroupOneMember.GetAttributeValue("cn")
 
 // Search is a mock for the real ldap search interface
 func (m *mockClient) Search(s *ldap.SearchRequest) (*ldap.SearchResult, error) {
@@ -76,6 +98,37 @@ func TestGet(t *testing.T) {
 				t.Errorf("got %s expected %s", err, tc.expectErr)
 			} else if got != tc.expect {
 				t.Errorf("got %s expected %s", got, tc.expect)
+			}
+		})
+	}
+}
+
+// test getMembers
+func TestGetMembers(t *testing.T) {
+	cases := []struct {
+		name  string
+		input ldap.SearchResult
+		want  groupMembers
+	}{
+		{
+			name: "group with one member",
+			input: ldap.SearchResult{
+				Entries: []*ldap.Entry{
+					&ldap.Entry{DN: mockGroupOneMember.DN, Attributes: mockGroupOneMember.Attributes},
+				},
+			},
+			want: groupMembers{mockGroupName: {mockUserName}},
+		},
+	}
+
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			got, err := getMembers(&tc.input)
+			if err != nil {
+				t.Errorf("got %v; want%v", got, nil)
+			}
+			if !reflect.DeepEqual(got, tc.want) {
+				t.Errorf("got %v; want %v", got, tc.want)
 			}
 		})
 	}
