@@ -13,9 +13,14 @@ GIT_SHA=$(shell git rev-list -1 HEAD)
 all: test build
 
 build:
-	$(GOBUILD) -ldflags "-X main.Version=$(GIT_SHA)" -o $(BINARY_NAME) -v ./...
+	$(GOBUILD) -ldflags \
+		"-X main.Version=$(GIT_SHA)" \
+		-o $(BINARY_NAME) -v ./...
 
-test:
+vet:
+	$(GOVET) ./...
+
+test: vet
 	$(GOTEST) -v ./...
 
 clean:
