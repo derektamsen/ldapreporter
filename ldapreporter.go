@@ -5,6 +5,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 
@@ -50,13 +51,6 @@ type config struct {
 	isTLS    bool   // true if this will be a TLS session
 }
 
-type group struct {
-	name    string
-	members []user
-}
-
-type user string
-
 // session creates a new ldap connection and returns a session object
 func session(c *config) (*ldap.Conn, error) {
 	conn, err := ldap.DialURL(c.server)
@@ -97,8 +91,6 @@ func main() {
 	}
 	defer session.Close()
 
-	log.Info(session)
-
 	// search ldap
 	search := ldap.NewSearchRequest(
 		"dc=planetexpress,dc=com",
@@ -113,21 +105,26 @@ func main() {
 		log.Error(err)
 	}
 
+	allGroups := make(map[string][]string)
 	for _, result := range results.Entries {
-		log.Info(result.DN)
+		group := result.GetAttributeValue("cn")
 
 		for _, member := range result.GetAttributeValues("member") {
 			parsed, err := ldap.ParseDN(member)
 			if err != nil {
 				log.Error(err)
 			}
+
 			for _, rdn := range parsed.RDNs {
 				for _, attrs := range rdn.Attributes {
 					if attrs.Type == "cn" {
-						log.Info(attrs.Value)
+						allGroups[group] = append(allGroups[group], attrs.Value)
 					}
 				}
 			}
 		}
 	}
+
+	jAllGroups, err := json.Marshal(allGroups)
+	fmt.Println(string(jAllGroups))
 }
