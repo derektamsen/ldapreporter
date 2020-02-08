@@ -29,7 +29,7 @@ clean:
 	rm -f $(BINARY_UNIX)
 
 run:
-	LOG_LEVEL=INFO $(GORUN) -ldflags "-X main.Version=$(GIT_SHA)" ./$(BINARY_NAME).go
+	LOG_LEVEL=INFO $(GORUN) -ldflags "-X main.Version=$(GIT_SHA)" ./$(BINARY_NAME).go -loglevel "INFO"
 
 dev:
 	docker-compose up && docker-compose down
