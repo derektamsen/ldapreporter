@@ -19,8 +19,8 @@ var Version string
 
 // cliFlags holds all of the cli options
 type cliFlags struct {
-	version                                              bool
-	ldapServer, user, password, basedn, filter, loglevel string
+	version                                                                    bool
+	ldapServer, user, password, basedn, filter, attrMember, attrUser, loglevel string
 }
 
 var flags cliFlags = cliFlags{}
@@ -57,6 +57,18 @@ func init() {
 		"searchfilter",
 		"(&(objectclass=Group))",
 		"LDAP search filter",
+	)
+	flag.StringVar(
+		&flags.attrMember,
+		"memberattr",
+		"member",
+		"LDAP group member attribute. Ex: uniquemember",
+	)
+	flag.StringVar(
+		&flags.attrUser,
+		"userattr",
+		"cn",
+		"LDAP group member attribute. Ex: uniquemember",
 	)
 	flag.StringVar(&flags.loglevel, "loglevel", "WARN", "Logging level")
 
@@ -123,7 +135,7 @@ func getMembers(r *ldap.SearchResult) (groupMembers, error) {
 		log.Infof("finding members of %v", group)
 
 		// loop through the member of a group to get a each user's CN
-		for _, member := range result.GetAttributeValues("member") {
+		for _, member := range result.GetAttributeValues(flags.attrMember) {
 			parsed, err := ldap.ParseDN(member)
 			if err != nil {
 				return nil, err
@@ -132,7 +144,7 @@ func getMembers(r *ldap.SearchResult) (groupMembers, error) {
 			// loop through each user and get their CN
 			for _, rdn := range parsed.RDNs {
 				for _, attrs := range rdn.Attributes {
-					if attrs.Type == "cn" {
+					if attrs.Type == flags.attrUser {
 						allGroups[group] = append(allGroups[group], attrs.Value)
 						log.Infof("found user %v in group %v", attrs.Value, group)
 					}
@@ -187,7 +199,7 @@ func main() {
 		flags.basedn,
 		ldap.ScopeWholeSubtree, ldap.NeverDerefAliases, 0, 0, false,
 		flags.filter,
-		[]string{"cn", "member"},
+		[]string{"cn", flags.attrMember},
 		nil,
 	)
 
