@@ -13,7 +13,7 @@ GIT_SHA=$(shell git rev-list -1 HEAD)
 all: test build
 
 build:
-	$(GOBUILD) -ldflags \
+	GOOS=linux GOARCH=amd64 $(GOBUILD) -ldflags \
 		"-X main.Version=$(GIT_SHA)" \
 		-o $(BINARY_NAME) -v ./...
 
