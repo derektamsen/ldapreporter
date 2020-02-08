@@ -29,7 +29,13 @@ clean:
 	rm -f $(BINARY_UNIX)
 
 run:
-	LOG_LEVEL=INFO $(GORUN) -ldflags "-X main.Version=$(GIT_SHA)" ./$(BINARY_NAME).go -loglevel "INFO"
+	LOG_LEVEL=INFO $(GORUN) -ldflags "-X main.Version=$(GIT_SHA)" \
+		./$(BINARY_NAME).go \
+		-loglevel "INFO" -server "ldap://localhost:8389" \
+		-user "cn=admin,dc=planetexpress,dc=com" \
+		-password "GoodNewsEveryone" \
+		-basedn "dc=planetexpress,dc=com" \
+		-searchfilter "(&(objectclass=Group))"
 
 dev:
 	docker-compose up && docker-compose down
