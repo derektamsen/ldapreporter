@@ -31,26 +31,26 @@ func init() {
 	flag.StringVar(
 		&flags.ldapServer,
 		"server",
-		"ldap://localhost:8389",
+		"",
 		"LDAP Server. Ex: ldap://localhost:389",
 	)
 	flag.StringVar(
 		&flags.user,
 		"user",
-		"cn=admin,dc=planetexpress,dc=com",
-		"LDAP Bind User",
+		"",
+		"LDAP Bind User. Ex: cn=admin,dc=planetexpress,dc=com",
 	)
 	flag.StringVar(
 		&flags.password,
 		"password",
-		"GoodNewsEveryone",
-		"LDAP Bind Password",
+		"",
+		"LDAP Bind Password. Ex: GoodNewsEveryone",
 	)
 	flag.StringVar(
 		&flags.basedn,
 		"basedn",
 		"dc=planetexpress,dc=com",
-		"LDAP base DN",
+		"LDAP base DN. Ex: dc=planetexpress,dc=com",
 	)
 	flag.StringVar(
 		&flags.filter,
