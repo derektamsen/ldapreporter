@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   test:
     docker:
@@ -17,7 +17,7 @@ workflows:
   version: 2
   build-test-workflow:
     jobs:
-      - test:
+      - test
       - build:
           requires:
             - test
