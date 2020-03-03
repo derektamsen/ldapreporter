@@ -18,8 +18,6 @@ workflows:
   build-test-workflow:
     jobs:
       - test:
-          context: org-global
       - build:
-          context: org-global
           requires:
             - test
