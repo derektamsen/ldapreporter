@@ -1,16 +1,24 @@
 version: 2.1
+executors:
+  golang:
+    docker:
+      - image: circleci/golang:1.14
+
+commands:
+  setup-image:
+    steps:
+      - checkout
+
 jobs:
   test:
-    docker:
-      - image: circleci/golang:1.14
+    executor: golang
     steps:
-      - checkout
+      - setup-image
       - run: make test
   build:
-    docker:
-      - image: circleci/golang:1.14
+    executor: golang
     steps:
-      - checkout
+      - setup-image
       - run: make build
 
 workflows:
