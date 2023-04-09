@@ -3,5 +3,5 @@ services:
   ldap:
     image: rroemhild/test-openldap:latest
     ports:
-    - "8389:389"
-    - "8636:636"
+    - "8389:10389"
+    - "8636:10636"
