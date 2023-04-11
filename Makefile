@@ -25,8 +25,8 @@ test: vet
 
 clean:
 	$(GOCLEAN)
-	rm -f $(BINARY_NAME)
-	rm -f $(BINARY_UNIX)
+	rm -f $(BINARY_NAME) $(BINARY_UNIX)
+	rm -r dist
 
 run:
 	LOG_LEVEL=INFO $(GORUN) -ldflags "-X main.Version=$(GIT_SHA)" \
@@ -39,3 +39,7 @@ run:
 
 dev:
 	docker-compose up && docker-compose down
+
+release:
+	goreleaser release --snapshot --clean
+	goreleaser check
