@@ -5,8 +5,7 @@ on:
     tags: [ 'v*' ]
 
 permissions:
-  contents: read
-  packages: write
+  contents: write
 
 jobs:
 
