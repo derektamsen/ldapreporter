@@ -3,7 +3,7 @@ module github.com/derektamsen/ldapreporter
 go 1.20
 
 require (
-	github.com/go-ldap/ldap/v3 v3.4.4
+	github.com/go-ldap/ldap/v3 v3.4.5
 	github.com/sirupsen/logrus v1.9.3
 )
 
