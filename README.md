@@ -63,3 +63,7 @@ Testing is configured to run automatically with a circleci PR.
 ```shell
 make test
 ```
+
+### Releasing
+
+Merge the release please pr. Merging the pr will trigger the [release-please action](https://github.com/googleapis/release-please-action) to create a new release.
