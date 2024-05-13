@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/derektamsen/ldapreporter/compare/v0.1.3...v0.1.4) (2024-05-13)
+
+
+### Bug Fixes
+
+* **ci:** use string of releases created output ([6da30fe](https://github.com/derektamsen/ldapreporter/commit/6da30fef10a30eb3554c102113881e98ac4c762d))
+
 ## [0.1.3](https://github.com/derektamsen/ldapreporter/compare/v0.1.2...v0.1.3) (2024-05-13)
 
 
