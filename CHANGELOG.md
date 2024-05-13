@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3](https://github.com/derektamsen/ldapreporter/compare/v0.1.2...v0.1.3) (2024-05-13)
+
+
+### Bug Fixes
+
+* **ci:** run goreleaser if true ([3005870](https://github.com/derektamsen/ldapreporter/commit/300587083d237ad73ad3ae5c16d63693972346b8))
+* **ci:** use root release created output ([30ee7cb](https://github.com/derektamsen/ldapreporter/commit/30ee7cbfde6612608e0b92e9a1fd01e37ff68053))
+
 ## [0.1.2](https://github.com/derektamsen/ldapreporter/compare/v0.1.1...v0.1.2) (2024-05-12)
 
 
