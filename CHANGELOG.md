@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.5](https://github.com/derektamsen/ldapreporter/compare/v0.1.4...v0.1.5) (2024-06-11)
+
+
+### Bug Fixes
+
+* force release after allowing release please googleapis ([a548653](https://github.com/derektamsen/ldapreporter/commit/a548653c34e48b4f8535f74569b080feeee18eed))
+* update goreleaser v2 and go 1.22 ([8ea8aaf](https://github.com/derektamsen/ldapreporter/commit/8ea8aaf08476887fbd8fec978cadea44c27c383a))
+
 ## [0.1.4](https://github.com/derektamsen/ldapreporter/compare/v0.1.3...v0.1.4) (2024-05-13)
 
 
