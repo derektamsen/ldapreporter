@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/derektamsen/ldapreporter/compare/v0.1.5...v0.1.6) (2025-04-15)
+
+
+### Bug Fixes
+
+* update devcontainer go 1.24 and run go mod tidy ([0bb32b5](https://github.com/derektamsen/ldapreporter/commit/0bb32b51b92728dd4308b590ae8e83be09a3adab))
+
 ## [0.1.5](https://github.com/derektamsen/ldapreporter/compare/v0.1.4...v0.1.5) (2024-06-11)
 
 
