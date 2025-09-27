@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/derektamsen/ldapreporter/compare/v0.1.6...v0.2.0) (2025-09-27)
+
+
+### Features
+
+* **devcontainer:** switch to base image and install go with feature ([#53](https://github.com/derektamsen/ldapreporter/issues/53)) ([1c61078](https://github.com/derektamsen/ldapreporter/commit/1c610786e89a8a15e759559aee5fc519ed49b1fd))
+
 ## [0.1.6](https://github.com/derektamsen/ldapreporter/compare/v0.1.5...v0.1.6) (2025-04-15)
 
 
