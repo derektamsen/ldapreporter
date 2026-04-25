@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/derektamsen/ldapreporter/compare/v0.3.0...v0.3.1) (2026-04-25)
+
+
+### Bug Fixes
+
+* **deps:** bump github.com/Azure/go-ntlmssp from 0.1.0 to 0.1.1 ([#63](https://github.com/derektamsen/ldapreporter/issues/63)) ([46d50ae](https://github.com/derektamsen/ldapreporter/commit/46d50aea7caaf457121c109eefa4a23887f369b9))
+
 ## [0.3.0](https://github.com/derektamsen/ldapreporter/compare/v0.2.0...v0.3.0) (2026-02-24)
 
 
