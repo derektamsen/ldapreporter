@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/derektamsen/ldapreporter/compare/v0.3.1...v0.3.2) (2026-04-27)
+
+
+### Bug Fixes
+
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#65](https://github.com/derektamsen/ldapreporter/issues/65)) ([2683556](https://github.com/derektamsen/ldapreporter/commit/268355604ed516d4c0274228000daa27f7e0feb7))
+
 ## [0.3.1](https://github.com/derektamsen/ldapreporter/compare/v0.3.0...v0.3.1) (2026-04-25)
 
 
