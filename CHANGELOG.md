@@ -1,5 +1,45 @@
 # Changelog
 
+## [0.4.0](https://github.com/derektamsen/ldapreporter/compare/v0.3.3...v0.4.0) (2026-05-19)
+
+
+### Features
+
+* add dependabot updates devcontainers ([3d1c2e1](https://github.com/derektamsen/ldapreporter/commit/3d1c2e138e5274b247bf8f68aaa7d94a28507abb))
+* add dependabot updates devcontainers ([070fccf](https://github.com/derektamsen/ldapreporter/commit/070fccf4ede0131d9b387612ac6124f457208fa3))
+* add dependabot updates for actions ([9b3a465](https://github.com/derektamsen/ldapreporter/commit/9b3a46534d5f100cf8bd2aa2867e490b2e06b0dd))
+* add dependabot updates for actions ([1154e3b](https://github.com/derektamsen/ldapreporter/commit/1154e3b6f4656ac6befdb46390a74bdcb75ed17e))
+* **ci:** add release-please to automatically create release prs ([0715c4b](https://github.com/derektamsen/ldapreporter/commit/0715c4b0b5d443998c0149d5b3716f3fb04c11d1))
+* **ci:** add release-please to automatically create release prs ([1d05512](https://github.com/derektamsen/ldapreporter/commit/1d05512ba7962e9c21ff3aa82189f15e5fc84216))
+* **deps:** bump goreleaser/goreleaser-action from 6 to 7 ([#60](https://github.com/derektamsen/ldapreporter/issues/60)) ([e159028](https://github.com/derektamsen/ldapreporter/commit/e159028d89d5aa8a64bc004a2f9a46dd71eb361f))
+* **devcontainer:** switch to base image and install go with feature ([#53](https://github.com/derektamsen/ldapreporter/issues/53)) ([1c61078](https://github.com/derektamsen/ldapreporter/commit/1c610786e89a8a15e759559aee5fc519ed49b1fd))
+
+
+### Bug Fixes
+
+* ci goreleaser needs contents write ([1db9546](https://github.com/derektamsen/ldapreporter/commit/1db954658c7a3ff1eeaf9a38e6d08ed10efaa14b))
+* ci goreleaser needs contents write ([9c80a0c](https://github.com/derektamsen/ldapreporter/commit/9c80a0ce83cce3998ac08eeaa58ddcd4b7819e74))
+* **ci:** allow release workflow write prs ([4e88662](https://github.com/derektamsen/ldapreporter/commit/4e886622afce9f4581bf4cd8b129045e8d6c689b))
+* **ci:** allow release workflow write prs ([918a589](https://github.com/derektamsen/ldapreporter/commit/918a58916a18349b7b330da5c80e55542e686a94))
+* **ci:** output releases created from release please job ([fe72aef](https://github.com/derektamsen/ldapreporter/commit/fe72aef088f93e849e3877ff6a43091aedf0a780))
+* **ci:** output releases created from release please job ([e282589](https://github.com/derektamsen/ldapreporter/commit/e2825898678ce55b100adb3cf47ca89f06a6be74))
+* **ci:** run goreleaser if released created true ([f5bb193](https://github.com/derektamsen/ldapreporter/commit/f5bb193e75ce491badac1636dbc49e681602f1b2))
+* **ci:** run goreleaser if released created true ([8135726](https://github.com/derektamsen/ldapreporter/commit/8135726df71dc8ca3169f3a19d8bf94bd400c45c))
+* **ci:** run goreleaser if true ([8acae37](https://github.com/derektamsen/ldapreporter/commit/8acae37b300e2f4221f101165f310f8b1da7c98c))
+* **ci:** run goreleaser if true ([3005870](https://github.com/derektamsen/ldapreporter/commit/300587083d237ad73ad3ae5c16d63693972346b8))
+* **ci:** use root release created output ([defe2e9](https://github.com/derektamsen/ldapreporter/commit/defe2e9873976ddc799c93518c2beda57d2ea337))
+* **ci:** use root release created output ([30ee7cb](https://github.com/derektamsen/ldapreporter/commit/30ee7cbfde6612608e0b92e9a1fd01e37ff68053))
+* **ci:** use string of releases created output ([637ff15](https://github.com/derektamsen/ldapreporter/commit/637ff15fa6ea6257700a1e65a0696092820e9f0b))
+* **ci:** use string of releases created output ([6da30fe](https://github.com/derektamsen/ldapreporter/commit/6da30fef10a30eb3554c102113881e98ac4c762d))
+* **deps:** bump github.com/Azure/go-ntlmssp from 0.1.0 to 0.1.1 ([#63](https://github.com/derektamsen/ldapreporter/issues/63)) ([46d50ae](https://github.com/derektamsen/ldapreporter/commit/46d50aea7caaf457121c109eefa4a23887f369b9))
+* **deps:** bump github/codeql-action from 4.35.4 to 4.35.5 ([#69](https://github.com/derektamsen/ldapreporter/issues/69)) ([dfab6b0](https://github.com/derektamsen/ldapreporter/commit/dfab6b09fce7e37005a2e9efc0f6f9ca5c692b94))
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#65](https://github.com/derektamsen/ldapreporter/issues/65)) ([2683556](https://github.com/derektamsen/ldapreporter/commit/268355604ed516d4c0274228000daa27f7e0feb7))
+* force release after allowing release please googleapis ([2a8a4af](https://github.com/derektamsen/ldapreporter/commit/2a8a4af04e1d09a627150f1bec2a59a36549c523))
+* force release after allowing release please googleapis ([a548653](https://github.com/derektamsen/ldapreporter/commit/a548653c34e48b4f8535f74569b080feeee18eed))
+* update devcontainer go 1.24 and run go mod tidy ([0bb32b5](https://github.com/derektamsen/ldapreporter/commit/0bb32b51b92728dd4308b590ae8e83be09a3adab))
+* update goreleaser v2 and go 1.22 ([670ec63](https://github.com/derektamsen/ldapreporter/commit/670ec63a46d6f267835c0621119f18c180bb0288))
+* update goreleaser v2 and go 1.22 ([8ea8aaf](https://github.com/derektamsen/ldapreporter/commit/8ea8aaf08476887fbd8fec978cadea44c27c383a))
+
 ## [0.3.3](https://github.com/derektamsen/ldapreporter/compare/v0.3.2...v0.3.3) (2026-05-19)
 
 
