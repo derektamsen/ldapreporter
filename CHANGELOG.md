@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/derektamsen/ldapreporter/compare/v0.3.2...v0.3.3) (2026-05-19)
+
+
+### Bug Fixes
+
+* **deps:** bump github/codeql-action from 4.35.4 to 4.35.5 ([#69](https://github.com/derektamsen/ldapreporter/issues/69)) ([dfab6b0](https://github.com/derektamsen/ldapreporter/commit/dfab6b09fce7e37005a2e9efc0f6f9ca5c692b94))
+
 ## [0.3.2](https://github.com/derektamsen/ldapreporter/compare/v0.3.1...v0.3.2) (2026-04-27)
 
 
