@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/derektamsen/ldapreporter/compare/v0.4.0...v0.4.1) (2026-05-21)
+
+
+### Bug Fixes
+
+* **deps:** bump goreleaser/goreleaser-action from 7.2.1 to 7.2.2 ([#68](https://github.com/derektamsen/ldapreporter/issues/68)) ([02e9590](https://github.com/derektamsen/ldapreporter/commit/02e95908c4d1fe7c0bae6bd06a730c4b739f482c))
+
 ## [0.4.0](https://github.com/derektamsen/ldapreporter/compare/v0.3.3...v0.4.0) (2026-05-19)
 
 
