@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.3](https://github.com/derektamsen/ldapreporter/compare/v0.4.2...v0.4.3) (2026-06-09)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 6.0.2 to 6.0.3 ([#76](https://github.com/derektamsen/ldapreporter/issues/76)) ([dbab1b8](https://github.com/derektamsen/ldapreporter/commit/dbab1b8a8d138e67620b90e4d959dd828a25d3d2))
+* **deps:** bump github/codeql-action from 4.36.0 to 4.36.1 ([#77](https://github.com/derektamsen/ldapreporter/issues/77)) ([29090b2](https://github.com/derektamsen/ldapreporter/commit/29090b2b0f58845c08a40dca34f8a07a7fe4ad90))
+
 ## [0.4.2](https://github.com/derektamsen/ldapreporter/compare/v0.4.1...v0.4.2) (2026-05-25)
 
 
