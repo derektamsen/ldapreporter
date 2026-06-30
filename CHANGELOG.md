@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.5](https://github.com/derektamsen/ldapreporter/compare/v0.4.4...v0.4.5) (2026-06-30)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 6.0.3 to 7.0.0 ([#81](https://github.com/derektamsen/ldapreporter/issues/81)) ([a2678d4](https://github.com/derektamsen/ldapreporter/commit/a2678d488253865a342a6e63b5a95f32b2ae5374))
+* **deps:** bump actions/setup-go from 6.4.0 to 6.5.0 ([#82](https://github.com/derektamsen/ldapreporter/issues/82)) ([d16b68c](https://github.com/derektamsen/ldapreporter/commit/d16b68c75399712bb44c11ea174c558e0b62bfbe))
+
 ## [0.4.4](https://github.com/derektamsen/ldapreporter/compare/v0.4.3...v0.4.4) (2026-06-16)
 
 
