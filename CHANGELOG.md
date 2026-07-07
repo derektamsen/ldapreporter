@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.6](https://github.com/derektamsen/ldapreporter/compare/v0.4.5...v0.4.6) (2026-07-07)
+
+
+### Bug Fixes
+
+* **deps:** bump golang.org/x/crypto from 0.48.0 to 0.52.0 ([#86](https://github.com/derektamsen/ldapreporter/issues/86)) ([77fecf5](https://github.com/derektamsen/ldapreporter/commit/77fecf56425db98a6fe3ad85b89480452194dcd7))
+* **deps:** bump goreleaser/goreleaser-action from 7.2.2 to 7.2.3 ([#84](https://github.com/derektamsen/ldapreporter/issues/84)) ([b0c820d](https://github.com/derektamsen/ldapreporter/commit/b0c820d21545d320618379b0b5fcfb5e46715f16))
+
 ## [0.4.5](https://github.com/derektamsen/ldapreporter/compare/v0.4.4...v0.4.5) (2026-06-30)
 
 
