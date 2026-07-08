@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/derektamsen/ldapreporter/compare/v0.5.0...v0.5.1) (2026-07-08)
+
+
+### Bug Fixes
+
+* specify goreleaser and test steps use go.mod go version ([#89](https://github.com/derektamsen/ldapreporter/issues/89)) ([c1b1ac2](https://github.com/derektamsen/ldapreporter/commit/c1b1ac2315d2ce4abc4ae163b4e07712e81f6e41))
+
 ## [0.5.0](https://github.com/derektamsen/ldapreporter/compare/v0.4.6...v0.5.0) (2026-07-08)
 
 
