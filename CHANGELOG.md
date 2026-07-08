@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/derektamsen/ldapreporter/compare/v0.4.6...v0.5.0) (2026-07-08)
+
+
+### Features
+
+* update to go 1.26.5 ([#87](https://github.com/derektamsen/ldapreporter/issues/87)) ([9e3118e](https://github.com/derektamsen/ldapreporter/commit/9e3118e1f3a926d56c213a0b1c2e882d028982cc))
+
 ## [0.4.6](https://github.com/derektamsen/ldapreporter/compare/v0.4.5...v0.4.6) (2026-07-07)
 
 
