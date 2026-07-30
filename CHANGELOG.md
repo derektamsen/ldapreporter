@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.0](https://github.com/derektamsen/ldapreporter/compare/v0.5.2...v0.6.0) (2026-07-30)
+
+
+### Features
+
+* **ci:** group codeql action updates ([#103](https://github.com/derektamsen/ldapreporter/issues/103)) ([a287710](https://github.com/derektamsen/ldapreporter/commit/a287710a093f955e5c9e450d83aa5f7670c6c442))
+
+
+### Bug Fixes
+
+* **deps:** bump the codeql-action group with 3 updates ([#105](https://github.com/derektamsen/ldapreporter/issues/105)) ([fb1ab30](https://github.com/derektamsen/ldapreporter/commit/fb1ab305b2c7ea8641576efb455565d57d90cbb9))
+
 ## [0.5.2](https://github.com/derektamsen/ldapreporter/compare/v0.5.1...v0.5.2) (2026-07-28)
 
 
