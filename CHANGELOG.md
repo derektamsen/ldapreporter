@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.2](https://github.com/derektamsen/ldapreporter/compare/v0.6.1...v0.6.2) (2026-08-25)
+
+
+### Bug Fixes
+
+* **deps:** bump ghcr.io/devcontainers/features/github-cli ([#109](https://github.com/derektamsen/ldapreporter/issues/109)) ([fbb9231](https://github.com/derektamsen/ldapreporter/commit/fbb92314f948f0a22661af458c4902ed7f2dbbe5))
+* **deps:** bump github.com/sirupsen/logrus from 1.9.4 to 1.10.0 ([#108](https://github.com/derektamsen/ldapreporter/issues/108)) ([5b85b53](https://github.com/derektamsen/ldapreporter/commit/5b85b539d070804a6b83eedc3b27a1646de3e1ff))
+* **deps:** bump the codeql-action group with 3 updates ([#110](https://github.com/derektamsen/ldapreporter/issues/110)) ([8c7d928](https://github.com/derektamsen/ldapreporter/commit/8c7d928447f510c257cf26f4b9a22cbca2c1e396))
+
 ## [0.6.1](https://github.com/derektamsen/ldapreporter/compare/v0.6.0...v0.6.1) (2026-08-11)
 
 
