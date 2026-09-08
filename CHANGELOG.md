@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.4](https://github.com/derektamsen/ldapreporter/compare/v0.6.3...v0.6.4) (2026-09-08)
+
+
+### Bug Fixes
+
+* **deps:** bump github.com/sirupsen/logrus from 1.10.1 to 1.10.2 ([#116](https://github.com/derektamsen/ldapreporter/issues/116)) ([0b892b1](https://github.com/derektamsen/ldapreporter/commit/0b892b16615ec77b4cae9cdfe41578b5f4870982))
+* **deps:** bump the codeql-action group with 3 updates ([#117](https://github.com/derektamsen/ldapreporter/issues/117)) ([e1af54f](https://github.com/derektamsen/ldapreporter/commit/e1af54f70690d17eab49f02af80c7aa31345bef2))
+
 ## [0.6.3](https://github.com/derektamsen/ldapreporter/compare/v0.6.2...v0.6.3) (2026-09-01)
 
 
