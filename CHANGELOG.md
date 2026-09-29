@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.6](https://github.com/derektamsen/ldapreporter/compare/v0.6.5...v0.6.6) (2026-09-29)
+
+
+### Bug Fixes
+
+* **deps:** bump ghcr.io/devcontainers/features/github-cli ([#122](https://github.com/derektamsen/ldapreporter/issues/122)) ([1a7a396](https://github.com/derektamsen/ldapreporter/commit/1a7a396dc567b9939d4951bc95e17632163c9d48))
+* **deps:** bump the codeql-action group with 3 updates ([#123](https://github.com/derektamsen/ldapreporter/issues/123)) ([179e5cc](https://github.com/derektamsen/ldapreporter/commit/179e5cc34bf5d5170fe4d7bb45fce9dd5d95c670))
+
 ## [0.6.5](https://github.com/derektamsen/ldapreporter/compare/v0.6.4...v0.6.5) (2026-09-22)
 
 
