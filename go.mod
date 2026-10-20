@@ -1,9 +1,9 @@
 module github.com/derektamsen/ldapreporter
 
-go 1.26
+go 1.26.0
 
 require (
-	github.com/go-ldap/ldap/v3 v3.4.14
+	github.com/go-ldap/ldap/v3 v3.4.15
 	github.com/sirupsen/logrus v1.10.2
 )
 
