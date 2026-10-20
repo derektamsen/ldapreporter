@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.8](https://github.com/derektamsen/ldapreporter/compare/v0.6.7...v0.6.8) (2026-10-20)
+
+
+### Bug Fixes
+
+* **deps:** bump github.com/go-ldap/ldap/v3 from 3.4.14 to 3.4.15 ([#127](https://github.com/derektamsen/ldapreporter/issues/127)) ([c86a8b2](https://github.com/derektamsen/ldapreporter/commit/c86a8b237a82284b9fec2b08913450703c41c467))
+* **deps:** bump goreleaser/goreleaser-action from 7.2.3 to 7.3.0 ([#129](https://github.com/derektamsen/ldapreporter/issues/129)) ([f567a81](https://github.com/derektamsen/ldapreporter/commit/f567a8135a432bbc9d6d6b4faae7242e61d2e176))
+* **deps:** bump the codeql-action group with 3 updates ([#128](https://github.com/derektamsen/ldapreporter/issues/128)) ([77f6984](https://github.com/derektamsen/ldapreporter/commit/77f69846af43df0ee1e8de53a3847d41f326fc31))
+
 ## [0.6.7](https://github.com/derektamsen/ldapreporter/compare/v0.6.6...v0.6.7) (2026-10-06)
 
 
