@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.11](https://github.com/derektamsen/ldapreporter/compare/v0.6.10...v0.6.11) (2026-11-17)
+
+
+### Bug Fixes
+
+* **deps:** bump ghcr.io/devcontainers/features/go from 1.4.0 to 1.4.1 ([#135](https://github.com/derektamsen/ldapreporter/issues/135)) ([2584eed](https://github.com/derektamsen/ldapreporter/commit/2584eed805bd2d91533d0455d426039369963cd1))
+* **deps:** bump the codeql-action group with 3 updates ([#136](https://github.com/derektamsen/ldapreporter/issues/136)) ([364cced](https://github.com/derektamsen/ldapreporter/commit/364cced47f64200c8e4c15bef1a130ac29301b7a))
+
 ## [0.6.10](https://github.com/derektamsen/ldapreporter/compare/v0.6.9...v0.6.10) (2026-11-03)
 
 
