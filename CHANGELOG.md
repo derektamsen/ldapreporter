@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.12](https://github.com/derektamsen/ldapreporter/compare/v0.6.11...v0.6.12) (2026-11-24)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-go from 7.0.0 to 7.1.0 ([#138](https://github.com/derektamsen/ldapreporter/issues/138)) ([9ee5200](https://github.com/derektamsen/ldapreporter/commit/9ee520056865761a891bb6171faa0cb63a4573b7))
+
 ## [0.6.11](https://github.com/derektamsen/ldapreporter/compare/v0.6.10...v0.6.11) (2026-11-17)
 
 
